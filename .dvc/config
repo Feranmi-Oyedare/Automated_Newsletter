@@ -1,7 +1,0 @@
-[core]
-    remote = origin
-['remote "origin"']
-    url = s3://ayonitemiferanmi/Automated_Newsletter
-    endpointurl = https://dagshub.com/api/v1/repo-buckets/s3/ayonitemiferanmi
-    access_key_id = 817b13c7b33a8de0184f583efdffab54e6cd9342
-    secret_access_key = 817b13c7b33a8de0184f583efdffab54e6cd9342
