@@ -1,0 +1,21 @@
+schema: '2.0'
+stages:
+  retrieve_articles:
+    cmd: python src/retrieve_articles.py
+    deps:
+    - path: src/retrieve_articles.py
+      hash: md5
+      md5: f0b84f85650d250074224ed1df541a7a
+      size: 4344
+  categorize_topics:
+    cmd: python src/categorize_topics.py
+    deps:
+    - path: src/categorize_topics.py
+      hash: md5
+      md5: 01d843d0132de329704072ae11d8ded6
+      size: 1981
+    outs:
+    - path: data/Research_Articles_Datasets.csv
+      hash: md5
+      md5: 2ba690257fa8727fb2da8a21ca0348d0
+      size: 154307

@@ -6,6 +6,9 @@ from retrieve_articles import merge_dataframes
 # Load environment variables
 load_dotenv()
 
+# Ensure 'data' directory exists
+os.makedirs("data", exist_ok=True)
+
 # Initializing OpenAI's client
 client = OpenAI(api_key=os.getenv("OPENAI_API_KEY"))
 
@@ -42,7 +45,7 @@ def categorize_topics():
 
     print("<====== Successfully Categorized the Research Article Topics ======>")
     # Export the merged dataset in form of csv file to the data folder
-    os.chdir("../") # Change directory to the parent folder
+    # os.chdir("../") # Change directory to the parent folder
     df.to_csv(f"data/Research_Articles_Datasets.csv")
     print("<====== Dataset Successfully Saved to Data Folder ======>")
     # Return the dataframe with topic categories
