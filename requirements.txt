@@ -1,0 +1,10 @@
+pandas
+pybliometrics
+datetime
+arxiv
+openai
+tqdm
+python-dotenv
+requests
+habanero
+beautifulsoup4

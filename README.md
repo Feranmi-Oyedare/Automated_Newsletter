@@ -1,1 +1,74 @@
-# Automated_Newsletter
+# Automated Research Newsletter
+
+## Overview
+This project automates the retrieval, categorization, and summarization of research articles from multiple journal repositories. The final output is a structured newsletter that highlights notable research relevant to Africa across various fields.
+
+## Features
+- **Automated Article Retrieval**: Fetches research articles from two journal repositories.
+- **Topic Categorization**: Classifies articles based on their titles.
+- **Newsletter Generation**: Uses OpenAI's GPT-4o to generate concise research summaries.
+- **Edition Management**: Saves newsletters and sends them out monthly.
+
+## Project Structure
+```
+├── datasets/                  # Stores retrieved research articles (CSV format)
+│   ├── Research_Articles_Datasets.csv
+│   └── ...
+├── outputs/                   # Stores generated newsletters
+│   ├── newsletter-latest-Edition.txt
+│   └── ...
+├── src/
+│   ├── retrieve_articles.py   # Retrieves articles from journal repositories
+│   ├── categorize_topics.py   # Categorizes articles into topics
+│   ├── generate_newsletter.py # Generates the newsletter
+├── requirements.txt           # Python dependencies
+├── README.md                  # Project documentation
+```
+
+## Installation
+1. Clone the repository:
+   ```bash
+   git clone https://github.com/ayonitemiferanmi/automated-newsletter.git
+   cd automated-newsletter
+   ```
+
+2. Create a virtual environment and install dependencies:
+   ```bash
+   python -m venv venv
+   source venv/bin/activate  # On Windows, use `venv\Scripts\activate`
+   pip install -r requirements.txt
+   ```
+
+3. Set up your `.env` file with required API keys:
+   ```
+   OPENAI_API_KEY=your_openai_api_key
+   ```
+4. Set up your Elsevier API with the required API key:
+   visit Elsevier Developer Portal: ([https://dev.elsevier.com/])
+   ```
+   OPENAI_API_KEY=your_openai_api_key
+   ```
+
+## Usage
+To generate the newsletter, run:
+```bash
+python src/generate_newsletter.py
+```
+
+## Automating Newsletter Editions
+The script automatically saves the latest edition each time a newsletter is generated. The latest newsletter is stored in `outputs/` with the name:
+```
+Newsletter-Latest-Edition.txt
+```
+
+<!-- ## Future Improvements -->
+<!-- - Integration with an email service to send newsletters to subscribers. -->
+<!-- - Improved topic categorization using machine learning. -->
+<!-- - Web interface for user interaction. -->
+
+## License
+This project is licensed under the MIT License.
+
+---
+**Maintainer:** Feranmi Ayonitemi Oyedare ([ayonitemiferanmi@gmail.com])
+
