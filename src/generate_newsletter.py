@@ -10,6 +10,7 @@ load_dotenv()
 client = OpenAI(api_key=os.getenv("OPENAI_API_KEY"))
 
 
+
 def generate_newsletter():
     # Load the dataframe
     df = categorize_topics()
@@ -18,10 +19,9 @@ def generate_newsletter():
     newsletter_content = "Research Newsletter\n\n"
     newsletter_content += "Welcome to this edition of our research newsletter, where we summarize notable research articles relating to Africa across various fields.\n\n"
 
-    count = 1
-
     print("<====== Generating the Newsletter ======>")
 
+    count = 1
     for topic in df["Topic_Category"].unique():
         categorized_df = df[df["Topic_Category"] == topic]
 
@@ -76,9 +76,9 @@ def generate_newsletter():
         count += 1
 
     # Print or save the newsletter
-    with open(f"outputs/Newsletter-Latest-Edition.txt", "w") as f:
-            f.write(newsletter_content)
-            print(f"Newsletter content saved as Newsletter-Latest-Edition.txt")
+    with open(f"outputs/Newsletter-Latest-Edition.txt", "w", encoding="utf-8") as f:
+        f.write(newsletter_content)
+        print(f"Newsletter content saved as Newsletter-Latest-Edition.txt")
 
 if __name__ == "__main__":
     generate_newsletter()
