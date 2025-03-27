@@ -28,7 +28,7 @@ This project automates the retrieval, categorization, and summarization of resea
 ## Installation
 1. Clone the repository:
    ```bash
-   git clone https://github.com/ayonitemiferanmi/automated-newsletter.git
+   git clone https://github.com/ayonitemiferanmi/Automated_Newsletter.git
    cd automated-newsletter
    ```
 
