@@ -6,6 +6,13 @@ from categorize_topics import categorize_topics
 # Load environment variables
 load_dotenv()
 
+# Get the parent directory of the current script
+BASE_DIR = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
+
+# Ensure 'outputs' directory exists in the parent directory
+OUTPUTS_DIR = os.path.join(BASE_DIR, "outputs")
+os.makedirs(OUTPUTS_DIR, exist_ok=True)
+
 # Initializing OpenAI's client
 client = OpenAI(api_key=os.getenv("OPENAI_API_KEY"))
 
@@ -76,7 +83,8 @@ def generate_newsletter():
         count += 1
 
     # Print or save the newsletter
-    with open(f"outputs/Newsletter-Latest-Edition.txt", "w", encoding="utf-8") as f:
+    output_path = os.path.join(OUTPUTS_DIR, "Newsletter-Latest-Edition.txt")
+    with open(output_path, "w", encoding="utf-8") as f:
         f.write(newsletter_content)
         print(f"Newsletter content saved as Newsletter-Latest-Edition.txt")
 
