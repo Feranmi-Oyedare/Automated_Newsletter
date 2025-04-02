@@ -1,4 +1,3 @@
-[core]
-    remote = origin
 ['remote "origin"']
-    url = https://dagshub.com/ayonitemiferanmi/Automated_Newsletter.dvc
+    url = s3://dvc
+    endpointurl = https://dagshub.com/ayonitemiferanmi/Automated_Newsletter.s3
