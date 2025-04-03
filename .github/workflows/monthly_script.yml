@@ -5,6 +5,10 @@ on:
     - cron: '5 * * * *'
   workflow_dispatch:
 
+env:
+  # OPENAI: ${{ secrets.OPENAI }}
+  GOOGLE_PASSWORD: ${{ secrets.GOOGLE_PASSWORD }}
+
 jobs:
   run-script:
     runs-on: ubuntu-latest
@@ -12,8 +16,6 @@ jobs:
     steps:
       - name: Checkout repository
         uses: actions/checkout@v3
-        with:
-          path: Automated_Newsletter
 
       - name: Set up Python
         uses: actions/setup-python@v4
@@ -27,4 +29,4 @@ jobs:
 
       - name: Run newsletter script
         run: python src/generate-newsletter.py
-        
+        working-directory: ${{ github.workspace }}
