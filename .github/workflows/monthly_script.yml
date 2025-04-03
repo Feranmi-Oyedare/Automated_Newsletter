@@ -24,7 +24,7 @@ jobs:
           pip install -r requirements.txt
 
       - name: Run newsletter script
-        run: python $GITHUB_WORKSPACE/src/generate-newsletter.py
+        run: python $GITHUB_WORKSPACE/src/generate_newsletter.py
         env:
           OPENAI_API_KEY: ${{ secrets.OPENAI_API_KEY }}
           GOOGLE_APP_PASSWORD: ${{ secrets.GOOGLE_APP_PASSWORD }}
