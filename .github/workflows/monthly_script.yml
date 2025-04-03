@@ -2,7 +2,7 @@ name: Monthly Automated Newsletter Script
 
 on:
   schedule:
-    - cron: '5 * * * *'
+    - cron: '* 10 1 * *'
   workflow_dispatch:
 
 jobs:
