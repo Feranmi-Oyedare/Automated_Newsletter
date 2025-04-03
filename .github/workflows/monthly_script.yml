@@ -7,7 +7,7 @@ on:
 
 env:
   # OPENAI: ${{ secrets.OPENAI }}
-  GOOGLE_PASSWORD: ${{ secrets.GOOGLE_PASSWORD }}
+  GOOGLE_APP_PASSWORD: ${{ secrets.GOOGLE_APP_PASSWORD }}
 
 jobs:
   run-script:
