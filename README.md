@@ -46,7 +46,7 @@ This project automates the retrieval, categorization, and summarization of resea
 4. Set up your Elsevier API with the required API key:
    visit Elsevier Developer Portal: ([https://dev.elsevier.com/])
    ```
-   OPENAI_API_KEY=your_openai_api_key
+   Configure pybliometrics.scopus.init() with your Elsevier API key
    ```
 
 ## Usage
