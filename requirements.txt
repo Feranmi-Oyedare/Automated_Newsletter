@@ -1,4 +1,5 @@
 pandas
+urllib3
 pybliometrics
 datetime
 arxiv
@@ -9,3 +10,4 @@ requests
 habanero
 beautifulsoup4
 dvc
+secure-smtplib
