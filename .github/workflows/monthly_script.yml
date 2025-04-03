@@ -6,7 +6,7 @@ on:
   workflow_dispatch:
 
 env:
-  # OPENAI: ${{ secrets.OPENAI }}
+  OPENAI_API_KEY: ${{ secrets.OPENAI_API_KEY }}
   GOOGLE_APP_PASSWORD: ${{ secrets.GOOGLE_APP_PASSWORD }}
 
 jobs:
