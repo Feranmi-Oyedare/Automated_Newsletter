@@ -44,17 +44,13 @@ This project automates the retrieval, categorization, and summarization of resea
    ```
    OPENAI_API_KEY=your_openai_api_key
    ```
+
 4. Set up your Elsevier API with the required API key:
-   visit Elsevier Developer Portal: ([https://dev.elsevier.com/]). After obtaining the key, create or edit the `pybliometrics.cfg` file in the following directory:
-   - **Windows**: `C:\Users\YourUsername\.config\pybliometrics\`
-   - **Linux/macOS**: `~/.config/pybliometrics/`
+   visit Elsevier Developer Portal: ([https://dev.elsevier.com/]) and store in your `.env` file
+   ```
+   SCOPUS_API_KEY = your_scopus_api_key
+   ```
    
-   The configuration file should look like this:
-   ```
-   ini
-   [Scopus]
-   APIKey = your_scopus_api_key
-   ```
 5. Set up your Google App Password for sending out email:
    visit Google App Password: ([https://myaccount.google.com/apppasswords])
    ```
