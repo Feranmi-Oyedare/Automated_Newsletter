@@ -23,6 +23,12 @@ jobs:
           python -m pip install --upgrade pip
           pip install -r requirements.txt
 
+      - name: Set up Scopus API configuration
+        run: |
+          mkdir -p ~/.config/pybliometrics
+          echo "[Scopus]" > ~/.config/pybliometrics/pybliometrics.cfg
+          echo "APIKey = ${{ secrets.SCOPUS_API_KEY }}" >> ~/.config/pybliometrics/pybliometrics.cfg
+
       - name: Run newsletter script
         run: python $GITHUB_WORKSPACE/src/generate_newsletter.py
         env:
