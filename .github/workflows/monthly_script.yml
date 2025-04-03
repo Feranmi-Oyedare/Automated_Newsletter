@@ -32,5 +32,6 @@ jobs:
       - name: Run newsletter script
         run: python $GITHUB_WORKSPACE/src/generate_newsletter.py
         env:
+          SCOPUS_API_KEY: ${{ secrets.SCOPUS_API_KEY }}
           OPENAI_API_KEY: ${{ secrets.OPENAI_API_KEY }}
           GOOGLE_APP_PASSWORD: ${{ secrets.GOOGLE_APP_PASSWORD }}
