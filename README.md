@@ -21,6 +21,7 @@ This project automates the retrieval, categorization, and summarization of resea
 │   ├── retrieve_articles.py   # Retrieves articles from journal repositories
 │   ├── categorize_topics.py   # Categorizes articles into topics
 │   ├── generate_newsletter.py # Generates the newsletter
+    ├── generate_newsletter.py # Sends the newsletter
 ├── requirements.txt           # Python dependencies
 ├── README.md                  # Project documentation
 ```
@@ -48,11 +49,21 @@ This project automates the retrieval, categorization, and summarization of resea
    ```
    Configure pybliometrics.scopus.init() with your Elsevier API key
    ```
+5. Set up your Google App Password for sending out email:
+   visit Google App Password: ([https://myaccount.google.com/apppasswords])
+   ```
+   set google_app_password in your .env file GOOGLE_APP_PASSWORD = "google_app_password"
+   ```
 
 ## Usage
 To generate the newsletter, run:
 ```bash
 python src/generate_newsletter.py
+```
+
+To send out the newsletter as email, run:
+```bash
+python src/send_newsletter.py
 ```
 
 ## Automating Newsletter Editions
@@ -70,5 +81,5 @@ Newsletter-Latest-Edition.txt
 This project is licensed under the MIT License.
 
 ---
-**Owner:** Hamoye Foundation ([hamoye.org]) **Maintainer:** Feranmi Ayonitemi Oyedare ([ayonitemiferanmi@gmail.com])
+**Owner:** Hamoye Foundation ([www.hamoye.org]) **Maintainer:** Feranmi Ayonitemi Oyedare ([ayonitemiferanmi@gmail.com])
 
