@@ -21,7 +21,7 @@ This project automates the retrieval, categorization, and summarization of resea
 │   ├── retrieve_articles.py   # Retrieves articles from journal repositories
 │   ├── categorize_topics.py   # Categorizes articles into topics
 │   ├── generate_newsletter.py # Generates the newsletter
-    ├── generate_newsletter.py # Sends the newsletter
+    ├── send_newsletter.py # Sends the newsletter
 ├── requirements.txt           # Python dependencies
 ├── README.md                  # Project documentation
 ```
@@ -50,7 +50,7 @@ This project automates the retrieval, categorization, and summarization of resea
    ```
    SCOPUS_API_KEY = your_scopus_api_key
    ```
-   
+
 5. Set up your Google App Password for sending out email:
    visit Google App Password: ([https://myaccount.google.com/apppasswords])
    ```
