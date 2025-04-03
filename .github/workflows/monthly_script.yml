@@ -5,10 +5,6 @@ on:
     - cron: '5 * * * *'
   workflow_dispatch:
 
-env:
-  OPENAI_API_KEY: ${{ secrets.OPENAI_API_KEY }}
-  GOOGLE_APP_PASSWORD: ${{ secrets.GOOGLE_APP_PASSWORD }}
-
 jobs:
   run-script:
     runs-on: ubuntu-latest
@@ -30,3 +26,6 @@ jobs:
       - name: Run newsletter script
         run: python src/generate-newsletter.py
         working-directory: ${{ github.workspace }}
+        env:
+          OPENAI_API_KEY: ${{ secrets.OPENAI_API_KEY }}
+          GOOGLE_APP_PASSWORD: ${{ secrets.GOOGLE_APP_PASSWORD }}
