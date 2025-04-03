@@ -62,6 +62,11 @@ python src/generate_newsletter.py
 ```
 
 To send out the newsletter as email, run:
+Make sure to edit the following:
+- sender email address
+- receiver email address
+- subject
+- message
 ```bash
 python src/send_newsletter.py
 ```
