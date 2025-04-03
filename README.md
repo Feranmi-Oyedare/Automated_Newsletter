@@ -70,5 +70,5 @@ Newsletter-Latest-Edition.txt
 This project is licensed under the MIT License.
 
 ---
-**Maintainer:** Feranmi Ayonitemi Oyedare ([ayonitemiferanmi@gmail.com])
+**Owner:** Hamoye Foundation ([hamoye.org]) **Maintainer:** Feranmi Ayonitemi Oyedare ([ayonitemiferanmi@gmail.com])
 
