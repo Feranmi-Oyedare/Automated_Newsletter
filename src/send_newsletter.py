@@ -39,7 +39,7 @@ def send_email():
     server.starttls()
 
     # login to the email account
-    server.login(user=sender_email, password=os.getenv("SMTP_PASSWORD"))
+    server.login(user=sender_email, password=os.getenv("GOOGLE_APP_PASSWORD"))
 
     # send the email
     server.sendmail(sender_email, receiver_email, msg.as_string())
