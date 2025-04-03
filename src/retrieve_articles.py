@@ -5,7 +5,8 @@ from pybliometrics.scopus import ScopusSearch, AbstractRetrieval
 import pandas as pd
 from datetime import datetime, timedelta
 import pybliometrics
-pybliometrics.scopus.init()
+import pybliometrics.scopus
+from pybliometrics.scopus.utils import create_config
 import arxiv
 import pandas as pd
 from openai import OpenAI
@@ -24,8 +25,15 @@ client = OpenAI(api_key=os.getenv("OPENAI_API_KEY"))
 end_date = datetime.today().strftime('%Y-%m-%d')
 start_date = (datetime.today() - timedelta(days=30)).strftime('%Y-%m-%d')
 
+# Set up Scopus Elsevier API
+api_keys = [os.getenv('SCOPUS_API_KEY')] 
+
+# Create configuration file
+create_config(keys=api_keys)
+print("Configuration file created successfully.")
 
 def retrieve_scopus_data():
+    pybliometrics.scopus.init()
     # Define the query
     query = f'''(TITLE-ABS-KEY(Africa OR Nigeria OR Kenya OR Ghana OR South Africa OR Liberia OR Egypt OR Lagos OR Abuja OR Morocco OR Rwanda OR Senegal OR "Sub-Saharan Africa")) 
             AND (DOCTYPE(AR)) 
