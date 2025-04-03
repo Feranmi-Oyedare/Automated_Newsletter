@@ -8,6 +8,4 @@ python-dotenv
 requests
 habanero
 beautifulsoup4
-dvc 
-dvc-s3 
-mlflow
+dvc
