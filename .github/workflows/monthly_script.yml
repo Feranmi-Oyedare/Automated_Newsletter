@@ -39,9 +39,14 @@ jobs:
           dvc remote modify origin endpointurl https://dagshub.com/ayonitemiferanmi/Automated_Newsletter.s3
           dvc remote modify origin --local access_key_id ${{ secrets.DAGSHUB_S3_ACCESS_KEY }}
           dvc remote modify origin --local secret_access_key ${{ secrets.DAGSHUB_S3_SECRET_KEY }}
-
+      - name: Install DVC
+        run: |
+          pip install dvc-s3
+    
       - name: Track Data with DVC
         run: |
+          git config --global user.email "ayonitemiferanmi@gmail.com"
+          git config --global user.name "ayonitemiferanmi"
           dvc add data/Research_Articles_Datasets.csv outputs/Newsletter-Latest-Edition.txt
           git add data/Research_Articles_Datasets.csv.dvc outputs/Newsletter-Latest-Edition.txt.dvc .gitignore
           git commit -m "Auto-update versioned data for the month" || echo "No changes to commit"
