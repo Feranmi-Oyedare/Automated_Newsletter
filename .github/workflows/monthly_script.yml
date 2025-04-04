@@ -39,6 +39,7 @@ jobs:
           dvc remote modify origin endpointurl https://dagshub.com/ayonitemiferanmi/Automated_Newsletter.s3
           dvc remote modify origin --local access_key_id ${{ secrets.DAGSHUB_S3_ACCESS_KEY }}
           dvc remote modify origin --local secret_access_key ${{ secrets.DAGSHUB_S3_SECRET_KEY }}
+          
       - name: Install DVC
         run: |
           pip install dvc-s3
