@@ -46,4 +46,7 @@ def send_email():
 
     return "Email sent out successfully"
 
+if __name__ == "__main__":
+    send_email()
+
 
