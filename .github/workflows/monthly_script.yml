@@ -52,10 +52,10 @@ jobs:
           git add data/Research_Articles_Datasets.csv.dvc outputs/Newsletter-Latest-Edition.txt.dvc .gitignore
           git commit -m "Auto-update versioned data for the month" || echo "No changes to commit"
       
-      - name: Push changes to Github
-        run: |
-          git commit -am "Auto-update versioned data for the month" 
-          git push || echo "No changes to push"
+      # - name: Push changes to Github
+      #  run: |
+      #    git commit -am "Auto-update versioned data for the month" 
+      #    git push || echo "No changes to push"
 
       - name: Push data to Dagshub
         run: dvc push || echo "No new data changes to push"
