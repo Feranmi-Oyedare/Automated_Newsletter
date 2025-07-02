@@ -11,3 +11,4 @@ habanero
 beautifulsoup4
 dvc
 secure-smtplib
+hf_xet
