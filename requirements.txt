@@ -15,3 +15,5 @@ hf_xet
 langchain-community
 langchain-openai
 wordcloud
+bertopic
+scipy
